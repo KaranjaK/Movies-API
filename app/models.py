@@ -1,6 +1,3 @@
-from typing_extensions import Self
-
-
 class Movie:
 
     def __init__(self, id, title, overview, poster, vote_average, vote_count):
