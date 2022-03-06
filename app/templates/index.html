@@ -1,9 +1,19 @@
-{% import 'macro.html' as macro %}
-{% extends 'base.html'%} {% block content %}
-  <body>
-    <h3>Popular Movie</h3>
-    <ul>
-      {{ macro.process_results(popular)}}
-    </ul>
-  </body>
+{% import 'macro.html' as macro %} {% extends 'base.html'%} {% block content %}
+<body>
+  <div class="container">
+    <form>
+      <input
+        type="text"
+        name="movie_query"
+        placeholder="Search for a Movie"
+        class="form-control"
+      />
+      <input type="submit" value="Submit" class="btn btn-default" />
+    </form>
+  </div>
+  <h3>Popular Movie</h3>
+  <ul>
+    {{ macro.process_results(popular)}}
+  </ul>
+</body>
 {% endblock %}
