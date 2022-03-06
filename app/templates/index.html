@@ -1,8 +1,9 @@
+{% import 'macro.html' as macro %}
 {% extends 'base.html'%} {% block content %}
-<h3>Popular Movies</h3>
-<ul>
-  {% for popular_movies in popular %}
-  <li>{{ popular_movies.title}}</li>
-  {% endfor %}
-</ul>
+  <body>
+    <h3>Popular Movie</h3>
+    <ul>
+      {{ macro.process_results(popular)}}
+    </ul>
+  </body>
 {% endblock %}

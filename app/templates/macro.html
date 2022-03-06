@@ -1,0 +1,5 @@
+{% macro process_results(movie_list) %}
+    {% for movie in movie_list %}
+        <li>{{ movie.title }}</li>
+    {% endfor%}
+{% endmacro %}
